@@ -1,0 +1,100 @@
+.hero {
+  height: 75px;
+  width: 2450px;
+  max-width: 100%;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  background-color: #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default;
+  position: relative;
+}
+.left {
+  height: auto;
+  width: 30%;
+  margin-left: 5%;
+}
+.right {
+  transition: width 0.2s linear;
+  height: auto;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-right: 2%;
+}
+.pages,.pagesToggled {
+  height: auto;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: white;
+  transition: top .4s linear;
+}
+.pages li {
+  padding: 0 2%;
+  transition: all .2s linear;
+}
+.pages li:hover{
+  color: #002e03;
+}
+.pages li::selection{
+  background: #ffffff;
+  color: #4caf50;
+}
+.pages li:hover::selection{
+  background-color: #014704;
+  color: white;
+}
+.toggle {
+  display: none;
+}
+.menuToggle,
+.closeToggle {
+  position: absolute;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 810px) {
+  .right {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .left{
+    z-index: 1;
+  }
+  .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 30px;
+  }
+  .right {
+    width: 100%;
+    position: absolute;
+  }
+  .pages{
+    opacity: 0;
+    position: relative;
+    top: -500px;
+  }
+  .pagesToggled {
+    position: relative;
+    top: 150px;
+    height: 70%;
+    width: 100%;
+    background-color: #4caf50;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 10px 0 25px 0;
+  }
+}
