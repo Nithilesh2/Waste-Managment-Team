@@ -1,100 +1,161 @@
 .hero {
   height: 75px;
-  width: 2450px;
-  max-width: 100%;
-  color: #ffffff;
-  font-family: "Nunito", sans-serif;
-  background-color: #4caf50;
+  width: 100%;
+  background-color: red;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  font-family: "Nunito", sans-serif;
+  background-color: #fbf9ef;
   cursor: default;
-  position: relative;
 }
 .left {
-  height: auto;
-  width: 30%;
-  margin-left: 5%;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4rem;
+  padding-left: 1rem;
+  transition: width 0.2s linear;
+  position: relative;
+}
+.logo {
+  font-size: 2rem;
+}
+.pages,
+.pagesShow {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pagesUL,
+.pagesULShow {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pagesLi {
+  font-size: 1rem;
+  font-weight: 600;
+}.pagesLi::selection{
+  color: #fbf9ef;
+  background-color: black;
 }
 .right {
-  transition: width 0.2s linear;
-  height: auto;
-  width: 50%;
+  height: 100%;
+  width: 40%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  font-size: 1.15rem;
+  justify-content: flex-end;
+  gap: 2rem;
+  transition: all 0.2s linear;
+  padding-right: 20px;
+}
+.signup,
+.login {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signupBtn,
+.loginBtn {
+  height: 35px;
+  width: 90px;
+  font-size: 1rem;
   font-weight: 600;
-  margin-right: 2%;
+  border-radius: 5px;
 }
-.pages,.pagesToggled {
-  height: auto;
-  width: 100%;
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-decoration: none;
-  color: white;
-  transition: top .4s linear;
+.signupBtn,.signupBtn::selection {
+  background-color: #fff;
+  color: #658352;
+  border: 1px solid #658352;
 }
-.pages li {
-  padding: 0 2%;
-  transition: all .2s linear;
-}
-.pages li:hover{
-  color: #002e03;
-}
-.pages li::selection{
-  background: #ffffff;
-  color: #4caf50;
-}
-.pages li:hover::selection{
-  background-color: #014704;
-  color: white;
+.loginBtn,.loginBtn::selection {
+  background-color: #658352;
+  color: #fff;
+  border: 1px solid #fff;
 }
 .toggle {
   display: none;
 }
-.menuToggle,
-.closeToggle {
+.toggleMenu,
+.toggleClose {
   position: absolute;
-  font-size: 1.6rem;
+  transition: all 0.2s linear;
+  z-index: 1;
 }
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 880px) {
   .right {
-    width: 60%;
+    width: 35%;
+    padding-right: 15px;
+    gap: 1rem;
   }
 }
-@media screen and (max-width: 700px) {
-  .left{
+@media screen and (max-width: 710px) {
+  .pagesUL {
+    position: absolute;
+    height: 0;
+    top: -150px;
+  }
+  .left,
+  .right,
+  .logo {
     z-index: 1;
   }
   .toggle {
+    height: 100%;
+    width: 41px;
+    display: flex;
+    align-items: center;
+  }
+  .toggleClose {
+    font-size: 1.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    right: 30px;
   }
-  .right {
-    width: 100%;
-    position: absolute;
+  .toggleMenu {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .pages{
-    opacity: 0;
+  .pages {
+    height: 300px;
+    width: 100vw;
     position: relative;
-    top: -500px;
+    left: 0;
   }
-  .pagesToggled {
+  .pagesULShow {
     position: relative;
-    top: 150px;
-    height: 70%;
-    width: 100%;
-    background-color: #4caf50;
+    top: 176px;
+    left: 57px;
+    width: 99vw;
+    height: 276px;
+    display: flex;
     flex-direction: column;
+    background-color: #fbf9ef;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
-    padding: 10px 0 25px 0;
+    padding: 20px 0;
+    margin: 0 -206px;
+    transition: top 0.3s linear;
+  }
+}
+@media screen and (max-width: 360px){
+  .signupBtn, .loginBtn{
+    width: 80px;
+    font-size: 0.88rem;
+  }
+  .right{
+    gap: 0.2rem;
   }
 }

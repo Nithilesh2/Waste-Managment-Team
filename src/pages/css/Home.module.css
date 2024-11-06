@@ -1,0 +1,100 @@
+.hero {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fbf9ef;
+  font-family: "Nunito", sans-serif;
+  padding-top: 42px;
+  gap: 3rem;
+}
+.one,
+.three,
+.five {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.oneLeft,
+.threeLeft,.fiveLeft {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.oneLeftTitle,
+.threeRightTitle,.fiveRightTitle {
+  font-size: 1.55rem;
+  width: 70%;
+}
+.oneLeftPara,
+.threeRightPara,.fiveRightPara {
+  width: 80%;
+  font-size: 0.9rem;
+  line-height: 1.45rem;
+}
+.fiveRightPara, .fiveRightTitle{
+  width: 100%;
+}
+.oneRight {
+  height: 260px;
+  width: 315px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.oneImage {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px 0 50px 50px;
+}
+.two {
+  width: 100%;
+}
+.twoCarouselOne div img,
+.twoCarouselTwo div img {
+  height: 220px;
+  width: 220px;
+}
+.twoCarouselTwo {
+  transform: scaleX(-1);
+}
+.twoCarouselTwo img {
+  transform: scaleX(-1);
+}
+.three{
+  padding-left: 150px;
+}
+.three,.five {
+  gap: 2rem;
+}
+.threeLeft,.fiveLeft {
+  height: 340px;
+  width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.threeImage,.fiveImage {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.threeRight,.fiveRight {
+  height: 260px;
+  width: 600px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.fiveRight{
+  width: 400px;
+}
